@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
-import '../css/FriendListItem.css';
+import './FriendListItem.css';
 
 function FriendListItem ({avatar, name, isOnline, id}) {
-    if (isOnline) {
+    const color = isOnline ? "green": "red";
+
         return (
             <li className="friends__item" key={id}>
                 <span className="status" style = {{
-                    background: "green",
+                    background: color,
                     width: "10px",
                     height: "10px",
                     borderRadius: "50%"
@@ -15,21 +16,6 @@ function FriendListItem ({avatar, name, isOnline, id}) {
                 <p className="name">{name}</p>
             </li>
         )
-    }
-
-    return (
-        <li className="friends__item" key={id}>
-            <span className="status" style = {{
-                background: "red",
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%"
-            }}></span>
-            <img className="friends__avatar" src={avatar} alt="User avatar" width="48" />
-            <p className="name">{name}</p>
-        </li>
-    )
-    
 }
 
 FriendListItem.propTypes = {

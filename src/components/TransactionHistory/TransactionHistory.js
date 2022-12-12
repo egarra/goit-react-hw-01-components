@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import '../css/TransactionHistory.css';
+import './TransactionHistory.css';
 
 function TransactionHistory ({items}) {
-    console.log(items)
+
     return (
         <table className="transaction-history">
             <thead>
@@ -31,7 +31,14 @@ function TransactionHistory ({items}) {
 }
 
 TransactionHistory.propTypes = {
-    items: PropTypes.array.isRequired
-  }
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        amount: PropTypes.string.isRequired,
+        currency: PropTypes.string.isRequired,
+      })
+    ),
+  };
 
 export default TransactionHistory;
