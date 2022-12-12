@@ -1,0 +1,42 @@
+.transaction-history {
+    margin-left: 200px;
+}
+
+.transaction-history thead tr {
+    display: flex;
+
+}
+
+.transaction-history thead tr th {
+    width: 150px;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.transaction-history thead tr th:nth-child(even) {
+    border-right: 1px solid white;
+    border-left:  1px solid white;
+}
+
+.transaction-history tbody tr {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.transaction-history tbody tr:nth-child(even) {
+    background-color: blanchedalmond;
+}
+
+.transaction-history tbody tr td {
+    width: 150px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.transaction-history tbody tr td:nth-child(even) {
+    border-right: 1px solid blanchedalmond;;
+    border-left:  1px solid blanchedalmond;;
+}
